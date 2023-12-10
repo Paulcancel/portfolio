@@ -7,6 +7,6 @@ pages:
         - echo "The site will be deploy to $CI_PAGES_URL"
     artifacts:
         paths:
-            - portfolio
+            - public
     rules:
         - if $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
