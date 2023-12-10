@@ -1,12 +1,13 @@
 # The Docker image that will be used to build your app
-image: portfolio
+image: busybox
 
 pages:
     stages: deploy
     script:
-        - echo "The site will be deploy to $CI_PAGES_URL"
+        - echo "nothing to do"
     artifacts:
         paths:
             - public
+        expire_in: 1 day
     rules:
         - if $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
