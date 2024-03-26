@@ -323,5 +323,6 @@ article h3{
     width: 30%;
 }
 #projets .savoirsfaire li{
+    display: list-item;
     margin-left: 6em;
 }
