@@ -277,6 +277,15 @@ article h3{
     margin-left: 9em;
 }
 
+#presentation article h3 + h5 {
+    width: 60%;
+    margin-left: 9em;
+    margin-top: 0;
+    border-top: 1px solid white;
+    background-color: #1a1a1a;
+    padding: 1em;
+}
+
 .end{
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
