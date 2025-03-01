@@ -4,6 +4,39 @@
 <meta charset="UTF-8" />
 <title>Page</title>
 <link rel="stylesheet" href="./Styles/styles.css" />
+<script>
+    const skillDescriptions = {
+        'Java': 'Langage principal utilisé en POO. Apprentissage de JavaFX, JEE, Spring Boot et Android.',
+        'Python': 'Utilisé pour le développement de scripts et l\'analyse de données. Expérience avec les bibliothèques pandas, numpy mais également la représentation graphique avec .',
+        'SQL': 'Conception et gestion de bases de données relationnelles. Maîtrise des requêtes complexes et de l\'optimisation.',
+        'HTML': 'Création de structures web sémantiques et accessibles.',
+        'CSS': 'Stylisation avancée et responsive design.',
+        'GIT': 'Gestion de version et collaboration. Maîtrise des workflows Git et des bonnes pratiques.',
+        'Jakartaa EE': 'Développement d\'applications d\'entreprise avec Java EE/Jakarta EE.',
+        'JavaScript': 'Développement front-end et manipulation du DOM. Utilisation des fonctionnalités modernes ES6+.',
+        'Docker': 'Conteneurisation d\'applications et gestion des environnements de développement.',
+        'React': 'Création d\'interfaces utilisateur dynamiques et réutilisables. Utilisation pour des projets tels que l\'application de gestion de formation pour Insy2s.',
+        'Redux': 'Gestion d\'état pour applications React complexes.',
+        'Spring Boot': 'Développement d\'applications Java avec Spring Boot et Spring Framework. Utilisation sur le projet MeetingPlannr',
+        'Kotlin': 'Développement backend avancé.',
+        'MongoDb': 'Gestion de bases de données NoSQL et requêtes agrégées.',
+        'Jira': 'Gestion de projet agile et suivi des tâches. Utilisation lors du stage chez Insy2s.',
+        'Bash': 'Scripts shell et automatisation sous Linux. Utilisation régulière pour automatiser des tâches sessions.',
+        'Gitlab Pages': 'Déploiement de sites statiques avec Gitlab Pages. Utilisé notamment pour ce portfolio :).'
+    };
+
+    function showPopup(skillName) {
+        document.getElementById('popup-title').textContent = skillName;
+        document.getElementById('popup-content').textContent = skillDescriptions[skillName] || 'Description à venir';
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
 </head>
 <body>
     <div class="topnav">
@@ -54,108 +87,103 @@
                     <article>
                         <ul>
                             <li>
-                                <script>
-                                    function showPopup() {
-                                        alert("Compétence: Java");
-                                    }
-                                </script>
-                                <img src="./Images/Icones/Java.png" alt="java" onclick="showPopup()">
+                                <img src="./Images/Icones/Java.png" alt="java" onclick="showPopup('Java')">
                                 <div class="title">
                                     <p>Java</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Python.png" alt="Python">
+                                <img src="./Images/Icones/Python.png" alt="Python" onclick="showPopup('Python')">
                                 <div class="title">
                                     <p>Python</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/SQL.png" alt="SQL">
+                                <img src="./Images/Icones/SQL.png" alt="SQL" onclick="showPopup('SQL')">
                                 <div class="title">
                                     <p>SQL</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/html.png" alt="HTML">
+                                <img src="./Images/Icones/html.png" alt="HTML" onclick="showPopup('HTML')">
                                 <div class="title">
                                     <p>HTML</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/css.png" alt="CSS">
+                                <img src="./Images/Icones/css.png" alt="CSS" onclick="showPopup('CSS')">
                                 <div class="title">
                                     <p>CSS</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/git.png" alt="GIT">
+                                <img src="./Images/Icones/git.png" alt="GIT" onclick="showPopup('GIT')">
                                 <div class="title">
                                     <p>GIT</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/JakartaEE.png" alt="JEE">
+                                <img src="./Images/Icones/JakartaEE.png" alt="JEE" onclick="showPopup('Jakartaa EE')">
                                 <div class="title">
                                     <p>JEE</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/JavaScript.png" alt="JS">
+                                <img src="./Images/Icones/JavaScript.png" alt="JS" onclick="showPopup('JavaScript')">
                                 <div class="title">
                                     <p>JS</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Docker.png" alt="DOCKER">
+                                <img src="./Images/Icones/Docker.png" alt="DOCKER" onclick="showPopup('Docker')">
                                 <div class="title">
                                     <p>Docker</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/React.png" alt="REACT">
+                                <img src="./Images/Icones/React.png" alt="REACT" onclick="showPopup('React')">
                                 <div class="title">
                                     <p>React</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Redux.png" alt="REDUX">
+                                <img src="./Images/Icones/Redux.png" alt="REDUX" onclick="showPopup('Redux')">
                                 <div class="title">
                                     <p>Redux</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/SpringBoot.png" alt="SPRINGBOOT">
+                                <img src="./Images/Icones/SpringBoot.png" alt="SPRINGBOOT" onclick="showPopup('Spring Boot')">
                                 <div class="title">
                                     <p>Spring</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Kotlin.png" alt="KOTLIN">
+                                <img src="./Images/Icones/Kotlin.png" alt="KOTLIN" onclick="showPopup('Kotlin')">
                                 <div class="title">
                                     <p>Kotlin</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/MongoDb.svg" alt="MONGODB">
+                                <img src="./Images/Icones/MongoDb.svg" alt="MONGODB" onclick="showPopup('MongoDb')">
                                 <div class="title">
                                     <p>MongoDb</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Jora.svg" alt="JIRA">
+                                <img src="./Images/Icones/Jora.svg" alt="JIRA" onclick="showPopup('Jira')">
                                 <div class="title">
                                     <p>Jira</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Bash.png" alt="BASH">
+                                <img src="./Images/Icones/Bash.png" alt="BASH" onclick="showPopup('Bash')">
                                 <div class="title">
                                     <p>Bash</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="./Images/Icones/Pages.png" alt="PAGES">
+                                <img src="./Images/Icones/Pages.png" alt="PAGES" onclick="showPopup('Gitlab Pages')">
                                 <div class="title">
                                     <p>Pages</p>
                                 </div>
@@ -180,14 +208,65 @@
                             Expériences
                         </h1>
                     </header>
-                    <article>
-                        <h3>Stage - Développement Full stack : "Application pour Insy2s"</h3>
-                        <h5>
-                            Création d'une application web complète de gestion de formation
-                            lors d'un stage pour l'entreprise Insy2s
-                            <br>
-                            Durée : 8 semaines
-                        </h5>
+                    <article class="stage-container">
+                        <div class="stage-header">
+                            <div class="company-info">
+                                <img src="./Images/Icones/insy2s.png" alt="Insy2s Logo" class="company-logo">
+                                <div class="company-details">
+                                    <h3 class="stage-title">Stage - Développement Full stack</h3>
+                                    <p>Insy2s - Villeneuve d'Ascq</p>
+                                    <p>Durée : 8 semaines (Juin - Août 2024)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stage-section">
+                            <h4>Missions principales</h4>
+                            <ul>
+                                <li>• Conception et développement d'une application web de gestion de formation</li>
+                                <li>• Mise en place d'une architecture REST API</li>
+                                <li>• Création d'une interface utilisateur responsive avec React et Tailwind</li>
+                                <li>• Implémentation de la gestion d'état avec Redux</li>
+                                <li>• Documentation de l'API avec Swagger</li>
+                                <li>• Gestion de projet avec la méthode Agile/Scrum</li>
+                            </ul>
+                        </div>
+
+                        <div class="stage-section">
+                            <h4>Compétences techniques acquises</h4>
+                            <ul>
+                                <li>• Maîtrise du développement Full Stack Java/React</li>
+                                <li>• Expertise en développement d'API REST</li>
+                                <li>• Gestion avancée de bases de données SQL</li>
+                                <li>• Pratique des méthodologies Agiles</li>
+                            </ul>
+                        </div>
+
+                        <div class="stage-section">
+                            <h4>Savoir-être et environnement de travail</h4>
+                            <ul>
+                                <li>• Travail en télétravail complet nécessitant une forte autonomie</li>
+                                <li>• Participation active aux daily meetings et réunions d'organisation</li>
+                                <li>• Communication proactive avec l'équipe en cas de difficultés</li>
+                                <li>• Capacité d'adaptation aux outils de travail à distance</li>
+                                <li>• Gestion efficace du temps et respect des deadlines</li>
+                            </ul>
+                        </div>
+
+                        <div class="stage-section">
+                            <h4>Technologies utilisées</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Material UI</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Jira</span>
+                            </div>
+                        </div>
                     </article>
             </section>
             <div class="end">
@@ -198,6 +277,12 @@
     <div class="bottomfoot">
         <a href="./Pages/Contact.html">Me contacter</a>
         <a href="./pdf/cv.pdf" target="_blank">Mon CV</a>
+    </div>
+    <div id="overlay" class="overlay" onclick="closePopup()"></div>
+    <div id="popup" class="popup">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <div id="popup-title" class="popup-title"></div>
+        <div id="popup-content" class="popup-content"></div>
     </div>
 </body>
 </html>
