@@ -1,0 +1,35 @@
+name: Deploy Website from Public Folder
+
+on:
+  push:
+    branches:
+      - main # Or whatever your main branch is called (e.g., 'master')
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # No explicit build step needed if it's purely static HTML/CSS/JS,
+      # as long as your files are ready in 'public'.
+      # If you do have a build step (e.g., npm run build),
+      # ensure it outputs the final static files INTO your 'public' folder.
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact from public folder
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public' # <-- This tells the action to use your 'public' directory
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
